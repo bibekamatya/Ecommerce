@@ -1,0 +1,44 @@
+/* css for search-nav */
+
+.nav-search {
+  background-color: white;
+}
+.searched-item {
+  text-transform: capitalize;
+  /* color: teal; */
+  font-weight: 500;
+}
+.searched-item h6 {
+  font-size: 15px;
+}
+
+.cart-basket {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 31%;
+  right: 20.25%;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: #418deb;
+  border-radius: 50%;
+}
+/* .cart-basket-icon {
+  top: 18px;
+  position: absolute;
+  right: 21.8%;
+} */
+
+.hide-price {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .cart-basket,
+  .cart-basket-icon {
+    top: 45%;
+    right: 10%;
+  }
+  .cart-basket-icon {
+    font-size: 25px;
+  }
+}

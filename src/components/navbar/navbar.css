@@ -1,0 +1,23 @@
+/* css for navbar */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar .nav-item {
+  padding: 0 10px !important;
+}
+.navbar .nav-link {
+  color: black !important;
+}
+.navbar {
+  background-color: white;
+  transition: 0.8s;
+}
+.logo-before-scroll {
+  height: 40px;
+  transition: 0.8s;
+}
+.logo-after-scroll {
+  height: 60px;
+  transition: 0.8s;
+}

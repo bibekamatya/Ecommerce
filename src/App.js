@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Redirect, Route, Switch } from "react-router-dom";
+import Home from "./components/pages/home";
+import Contact from "./components/pages/contact";
+import Navbar from "./components/navbar/navbar";
+import ProductContextProvider from "./components/Global/productContext";
+import Cart from "./components/pages/cart";
+import CartContextProvider from "./components/Global/cartContext";
+import Test from './components/pages/test';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ProductContextProvider>
+        <CartContextProvider>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/cart' component={Cart} />
+            <Route exact path='/t' component={Test} />
+
+          </Switch>
+          <Redirect to='/' />
+        </CartContextProvider>
+      </ProductContextProvider>
     </div>
   );
 }

@@ -2,37 +2,134 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product .card,
+.product .card-body {
+  border-radius: 1rem;
+}
+.product img {
+  height: 250px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.product .title {
+  color: rgb(100, 81, 81);
+  font-size: 13px !important;
+}
+
+.product .price {
+  font-size: 14px;
+  color: rgb(255, 111, 0);
+  font-family: cursive;
+  padding-top: 5px !important;
+  float: left;
+}
+.hot span {
+  background-color: rgb(216, 156, 156);
+  color: white !important;
+  padding: 1px 5px 3px 5px;
+  border: 1px;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.new span {
+  background-color: rgb(160, 208, 160);
+  color: white !important;
+  padding: 1px 5px 3px 5px;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.cart .img {
+  height: 80px;
+  width: 80px;
+}
+.cart .title {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  color: black !important;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.fixTableHead {
+  overflow-y: auto;
+  max-height: 80vh;
+  font-size: 12px;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: -1px;
+  transition: 0.8s ease-in-out;
+  background-color: #284561;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d;
+}
+.cart-icon-list {
+  border: 1px solid #7e7878;
+  border-radius: 4px !important;
+  padding: 0 2px;
+}
+
+.plus-minus-icon {
+  color: black !important;
+}
+/* .cart .card {
+  flex-direction: unset !important;
+} */
+
+.cart .card p {
+  font-size: 12px;
+}
+
+.cart-basket {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 31%;
+  right: 20.25%;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: #418deb;
+  border-radius: 50%;
+}
+/* .cart-basket-icon {
+  top: 18px;
+  position: absolute;
+  right: 21.8%;
+} */
+
+.hide-price {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .cart-basket,
+  .cart-basket-icon {
+    top: 45%;
+    right: 10%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .cart-basket-icon {
+    font-size: 25px;
   }
 }
