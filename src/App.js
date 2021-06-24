@@ -6,7 +6,6 @@ import Navbar from "./components/navbar/navbar";
 import ProductContextProvider from "./components/Global/productContext";
 import Cart from "./components/pages/cart";
 import CartContextProvider from "./components/Global/cartContext";
-import Test from './components/pages/test';
 
 function App() {
   return (
@@ -18,8 +17,6 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/cart' component={Cart} />
-            <Route exact path='/t' component={Test} />
-
           </Switch>
           <Redirect to='/' />
         </CartContextProvider>
