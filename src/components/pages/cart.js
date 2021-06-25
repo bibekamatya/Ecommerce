@@ -112,7 +112,7 @@ const Cart = (props) => {
             </div>
 
             <div className='col-md-2 m-auto'>
-              <div className='card-body text-left'>
+              <div className='text-start'>
                 <p>Total Quantity : {qty}</p>
                 <p>Total Amount : {totalPrice}</p>
                 <StripeCheckout

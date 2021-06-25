@@ -13,11 +13,60 @@ body {
   background-color: white;
   transition: 0.8s;
 }
-.logo-before-scroll {
+.logo-after-scroll {
   height: 40px;
   transition: 0.8s;
 }
-.logo-after-scroll {
+.logo-before-scroll {
   height: 60px;
   transition: 0.8s;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+
+.cart-basket {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 31%;
+  right: 14%;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: #418deb;
+  border-radius: 50%;
+}
+/* .cart-basket-icon {
+  top: 1px;
+  position: absolute;
+  right: 200%;
+} */
+
+.hide-price {
+  display: none;
+}
+
+.icon-bar {
+  visibility: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .cart-basket-icon {
+    top: 30%;
+    right: 10%;
+    font-size: 25px;
+  }
+
+  .cart-basket {
+    top: 1%;
+  }
+
+  .icon-bar {
+    visibility: visible;
+    position: absolute;
+    top: 15%;
+    z-index: 1;
+    right: 2%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }

@@ -32,14 +32,14 @@ const Home = () => {
               <div key={product.id} className='col-md-3 p-2 col-6  pb-md-5'>
                 <div className='card shadow h-100'>
                   {product.price < 50 ? (
-                    <div className='text-left new'>
+                    <div className='text-start new'>
                       <span>New</span>
                     </div>
                   ) : (
                     ""
                   )}
                   {product.price > 50 ? (
-                    <div className='text-left hot'>
+                    <div className='text-start hot'>
                       <span>Hot</span>
                     </div>
                   ) : (
@@ -52,18 +52,18 @@ const Home = () => {
                       className='img-fluid custom-food-image'
                     />
                     <div className='pt-4'>
-                      <h6 className='title text-capitalize text-left pb-1'>
+                      <h6 className='title text-capitalize text-start pb-1'>
                         {product.title}
                       </h6>
                       <div className='card-footer bg-white px-0 pt-2 pb-2'>
                         <div className='row px-2'>
                           <div className='col-6'>
-                            <h6 className='price text-left'>
+                            <h6 className='price text-start'>
                               $ {product.price}
                             </h6>
                           </div>
                           <div
-                            className='col-6 text-right cursor'
+                            className='col-6 text-end cursor'
                             onClick={handleShow}
                             // onClick={() =>
                             //   dispatch({

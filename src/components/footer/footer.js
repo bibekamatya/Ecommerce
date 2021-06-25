@@ -21,14 +21,11 @@ const Footer = () => {
             <div className='col-sm-12'>
               <div className='about'>
                 <p>
-                  Find the best recipes from across the web. Filter by calories
-                  and diet. Share recipes with friends and on social networks.
-                  We provide nutrition solutions to businesses in the food,
-                  health and wellness sectors, leveraging its proprietary
-                  cloud-based, structured-data semantic technology platform.
-                  Unlike traditional competitors, we deliver value-added
-                  nutrition data in real time and at fraction of the cost,
-                  saving clients both time and money.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
                 </p>
 
                 <div className='social-media'>
