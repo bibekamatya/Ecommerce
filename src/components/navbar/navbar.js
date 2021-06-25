@@ -48,7 +48,7 @@ const Navbar = (props) => {
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto me-auto'>
             <Link to='/'>
-              <li className='nav-item active'>
+              <li className='nav-item active mx-md-2 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -59,7 +59,7 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/contact'>
-              <li className='nav-item mx-md-4 mx-auto'>
+              <li className='nav-item mx-md-2 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -70,7 +70,7 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/about'>
-              <li className='nav-item '>
+              <li className='nav-item mx-md-2 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -80,7 +80,7 @@ const Navbar = (props) => {
                 </span>
               </li>
             </Link>
-            <li class='nav-item dropdown'>
+            <li class='nav-item dropdown mx-md-2 mx-auto'>
               <Link
                 class='nav-link dropdown-toggle'
                 data-bs-toggle='dropdown'
@@ -91,32 +91,24 @@ const Navbar = (props) => {
                 Catogories
               </Link>
               <ul class='dropdown-menu'>
-                <Link to=''>
+                <Link to='/contact'>
                   <li>
-                    <a class='dropdown-item' href='#'>
-                      Action
-                    </a>
+                    <span class='dropdown-item'>Action</span>
                   </li>
                 </Link>
-                <Link to=''>
+                <Link to='/contact'>
                   <li>
-                    <a class='dropdown-item' href='#'>
-                      Action
-                    </a>
+                    <span class='dropdown-item'>Action</span>
                   </li>
                 </Link>
-                <Link to=''>
+                <Link to='/contact'>
                   <li>
-                    <a class='dropdown-item' href='#'>
-                      Action
-                    </a>
+                    <span class='dropdown-item'>Action</span>
                   </li>
                 </Link>
-                <Link to=''>
+                <Link to='/contact'>
                   <li>
-                    <a class='dropdown-item' href='#'>
-                      Action
-                    </a>
+                    <span class='dropdown-item'>Action</span>
                   </li>
                 </Link>
               </ul>
@@ -160,7 +152,7 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/'>
-              <li className='nav-item'>
+              <li className='nav-item me-md-5 me-0'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
