@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "./logo.PNG";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./../Global/cartContext";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CategoryContext } from "../Global/categoryContext";
 import { ArrowBarRight } from "react-bootstrap-icons";
@@ -125,7 +125,7 @@ const Navbar = (props) => {
               <Link to='/cart'>
                 <li className='nav-item d-sm-none d-md-block d-none'>
                   <span
-                    className='nav-link'
+                    className='nav-link position-relative'
                     data-bs-toggle='collapse'
                     data-bs-target='.navbar-collapse.show'
                   >
@@ -138,7 +138,7 @@ const Navbar = (props) => {
                         className={
                           item === 0
                             ? "hide-price"
-                            : " cart-basket d-flex align-items-center justify-content-center"
+                            : "position-absolute my-badge translate-middle badge rounded-pill bg-primary wf-light"
                         }
                       >
                         {item}

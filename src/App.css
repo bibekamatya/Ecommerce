@@ -28,7 +28,7 @@ a:link {
 .hot span {
   background-color: rgb(216, 156, 156);
   color: white !important;
-  padding: 1px 5px 3px 5px;
+  padding: 3px 5px 3px 5px;
   border: 1px;
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
@@ -37,7 +37,7 @@ a:link {
 .new span {
   background-color: rgb(160, 208, 160);
   color: white !important;
-  padding: 1px 5px 3px 5px;
+  padding: 3px 5px 3px 5px;
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
@@ -117,4 +117,10 @@ a:link {
   .fixTableHead {
     font-size: 12px;
   }
+  .product .custom-home-image{
+    height: 200px;
+
+  }
+
 }
+

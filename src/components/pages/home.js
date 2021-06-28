@@ -53,7 +53,7 @@ const Home = () => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className='img-fluid custom-food-image'
+                      className='img-fluid custom-home-image'
                     />
                     <div className='pt-4'>
                       <h6 className='title text-capitalize text-start pb-1'>
