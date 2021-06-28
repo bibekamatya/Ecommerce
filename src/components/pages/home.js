@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='container' style={{ paddingTop: "150px", minHeight:'500px' }}>
+      <div className='container' style={{ paddingTop: "150px", minHeight:'70vh' }}>
         <div className='row product'>
           {data.Products.map((product) => {
             const handleShow = () => {
