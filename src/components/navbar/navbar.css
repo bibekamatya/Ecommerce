@@ -6,6 +6,9 @@ body {
 .navbar .nav-item {
   padding: 0 10px !important;
 }
+.navbar-light .navbar-toggler {
+  color: transparent !important;
+}
 .navbar .nav-link {
   color: black !important;
 }
@@ -32,7 +35,7 @@ body {
 
 .badge{
   padding: .25em .50em !important;
-  font-weight: lighter !;
+  font-weight: lighter !important;
 }
 .my-badge{
   top: 10px;

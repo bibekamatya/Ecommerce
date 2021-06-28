@@ -108,7 +108,7 @@ const Navbar = (props) => {
                       >
                         <li>
                           <span
-                            className='dropdown-item'
+                            className='dropdown-item text-capitalize'
                             data-bs-toggle='collapse'
                             data-bs-target='.navbar-collapse.show'
                           >
