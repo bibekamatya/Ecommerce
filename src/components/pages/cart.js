@@ -39,9 +39,9 @@ const Cart = (props) => {
       className='container px-md-auto mx-md-auto cart'
     >
       {shoppingCart.length > 0 ? (
-        <div className='card cart shadow-lg'>
-          <div className='row'>
-            <div className='col-md-10 pr-md-0'>
+        <div className='card my-cart shadow-lg pt-md-0 pt-5 pt-xl-0 '>
+          <div className=''>
+            <div className='pr-md-0'>
               <div className='fixTableHead'>
                 <Table responsve className='table table-striped'>
                   <thead>
@@ -110,20 +110,22 @@ const Cart = (props) => {
                 </Table>
               </div>
             </div>
+          </div>
 
-            <div className='col-md-2 m-auto'>
-              <div className='text-start'>
-                <p>Total Quantity : {qty}</p>
-                <p>Total Amount : {totalPrice}</p>
-                <StripeCheckout
-                  stripeKey='pk_test_51J5bT7SCgFasMdq4MnJzzDAEzil35dNbMdapFipHacYso9MIljPjwI5k0QiEepP7JUDQrKtJ031L7eQgS8McAQY9005RCqap0n'
-                  token={HandleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={totalPrice * 100}
-                  name='All Products'
-                ></StripeCheckout>
-              </div>
+          {/* <div className='col-md-2 m-auto'> */}
+          <div className='card-body mr-auto mb-2'>
+            <div className='text-end'>
+              <p>Total Quantity : {qty}</p>
+              <p className='text-success'>Shipping Cost : $ 0</p>
+              <p className='text-danger bold fw-bold'>Total : $ {totalPrice}</p>
+              <StripeCheckout
+                stripeKey='pk_test_51J5bT7SCgFasMdq4MnJzzDAEzil35dNbMdapFipHacYso9MIljPjwI5k0QiEepP7JUDQrKtJ031L7eQgS8McAQY9005RCqap0n'
+                token={HandleToken}
+                billingAddress
+                shippingAddress
+                amount={totalPrice * 100}
+                name='All Products'
+              ></StripeCheckout>
             </div>
           </div>
         </div>

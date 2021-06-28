@@ -1,19 +1,28 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
-  
-
   const [Products, setProducts] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await axios.get(`https://fakestoreapi.com/${Search}`);
+  //     setProducts(response.data);
+  //   };
+  //   fetchData();
+  // }, []);
+
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`https://fakestoreapi.com/products`);
-      setProducts(response.data);
-    };
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    const response = await axios.get(`https://fakestoreapi.com/products`);
+    setProducts(response.data);
+  };
+
 
 
 
@@ -27,3 +36,4 @@ const ProductContextProvider = (props) => {
 };
 
 export default ProductContextProvider;
+

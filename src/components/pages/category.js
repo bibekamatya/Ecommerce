@@ -1,20 +1,33 @@
-import { useContext } from "react";
-import { ProductContext } from "../Global/productContext";
+import { useContext, useState, useEffect } from "react";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
+import axios from "axios";
 
-const Home = () => {
-  const data = useContext(ProductContext);
+const Home = (props) => {
+  const category = props.location.state;
+
   const { dispatch } = useContext(CartContext);
+
+  const [Product, setProduct] = useState([]);
+
+  // useEffect(() => {
+  const fetchData = async () => {
+    const response = await axios.get(
+      `https://fakestoreapi.com/products/category/${category.catName}`
+    );
+    setProduct(response.data);
+  };
+  fetchData();
+  // }, []);
 
   return (
     <>
-      <div className='container' style={{ paddingTop: "150px", minHeight:'500px' }}>
+      <div className='container' style={{ paddingTop: "150px" }}>
         <div className='row product'>
-          {data.Products.map((product) => {
+          {Product.map((product) => {
             const handleShow = () => {
               toast.success("Added to Cart", {
                 position: toast.POSITION.TOP_RIGHT,
@@ -29,12 +42,7 @@ const Home = () => {
             };
             return (
               <div key={product.id} className='col-md-3 p-2 col-6 pb-md-5'>
-                <div
-                  className='card shadow h-100'
-                  data-aos='fade-up'
-                  data-aos-duration='1000'
-                  data-aos-once='true'
-                >
+                <div className='card shadow h-100'>
                   {product.price < 50 ? (
                     <div className='text-start new'>
                       <span>New</span>
@@ -59,7 +67,10 @@ const Home = () => {
                       <h6 className='title text-capitalize text-start pb-1'>
                         {product.title}
                       </h6>
-                      <p className='text-muted text-start' style={{fontSize:'12px'}}>
+                      <p
+                        className='text-muted text-start'
+                        style={{ fontSize: "12px" }}
+                      >
                         {product.category}
                       </p>
                       <div className='card-footer bg-white px-0 pt-2 pb-2'>

@@ -20,7 +20,7 @@ a:link {
 
 .product .price {
   font-size: 14px;
-  color: rgb(255, 111, 0);
+  color: #ff4d01;
   font-family: cursive;
   padding-top: 5px !important;
   float: left;
@@ -64,7 +64,6 @@ a:link {
 .fixTableHead {
   overflow-y: auto;
   max-height: 80vh;
-  font-size: 12px;
 }
 .fixTableHead thead th {
   position: sticky;
@@ -97,12 +96,25 @@ a:link {
 .plus-minus-icon {
   color: black !important;
 }
-/* .cart .card {
-  flex-direction: unset !important;
-} */
 
 .cart .card p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
+.signup {
+  border-radius: 35px !important;
+  /* padding: 6px 15px !important; */
+}
 
+.nav-links {
+  color: white !important;
+}
+.spinner {
+  align-items: center !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .fixTableHead {
+    font-size: 12px;
+  }
+}
