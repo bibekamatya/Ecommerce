@@ -1,0 +1,50 @@
+/* css for cart */
+
+.fixTableHead {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: -1px;
+  transition: 0.8s ease-in-out;
+  background-color: #284561;
+}
+
+.cart .img {
+  height: 80px;
+  width: 80px;
+}
+.cart .title {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  color: black !important;
+}
+
+.cart .card p {
+  font-size: 14px;
+}
+
+.cart-icon-list {
+  border: 1px solid #7e7878;
+  border-radius: 4px !important;
+  padding: 0 2px;
+}
+
+.cart-icon-list:hover{
+  background-color: rgba(125, 176, 223, 0.563);
+  transition: 0.4s;
+}
+
+.plus-minus-icon {
+  color: black !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .fixTableHead {
+    font-size: 12px;
+  }
+}
+
+

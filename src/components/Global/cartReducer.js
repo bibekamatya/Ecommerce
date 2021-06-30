@@ -5,6 +5,7 @@ export const CartReducer = (state, action) => {
   let updatedPrice;
   let updatedQty;
   let updatedItem;
+  console.log(state);
 
   switch (action.type) {
     case "ADD_TO_CART":
@@ -72,6 +73,8 @@ export const CartReducer = (state, action) => {
     case "EMPTY":
       return { shoppingCart: [], totalPrice: 0, qty: 0, item: 0 };
 
+    case "LOGIN":
+      break;
     default:
       return state;
   }

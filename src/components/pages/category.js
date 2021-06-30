@@ -1,31 +1,35 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
 import axios from "axios";
+import Navbar from "./../navbar/navbar";
 
-const Home = (props) => {
-  const category = props.location.state;
+const Catogory = (props) => {
+  const Category = props.location.state;
 
   const { dispatch } = useContext(CartContext);
 
   const [Product, setProduct] = useState([]);
-
+ 
   // useEffect(() => {
   const fetchData = async () => {
     const response = await axios.get(
-      `https://fakestoreapi.com/products/category/${category.catName}`
+      `https://fakestoreapi.com/products/category/${Category.CatName}`
     );
     setProduct(response.data);
   };
   fetchData();
   // }, []);
 
+ 
+
   return (
     <>
-      <div className='container' style={{ paddingTop: "150px" }}>
+     <Navbar />
+      <div className='container' style={{minHeight:'50vh'}}>
         <div className='row product'>
           {Product.map((product) => {
             const handleShow = () => {
@@ -111,4 +115,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default Catogory;

@@ -5,18 +5,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
+import Navbar from "./../navbar/navbar";
 
 const Home = () => {
   const data = useContext(ProductContext);
-  const { dispatch } = useContext(CartContext);
+  const { dispatch,IsLogedIn } = useContext(CartContext);
+
+  console.log(IsLogedIn);
 
   return (
     <>
-      <div className='container' style={{ paddingTop: "150px", minHeight:'70vh' }}>
+      <Navbar />
+      <div className='container' style={{ minHeight: "70vh" }}>
         <div className='row product'>
           {data.Products.map((product) => {
-            const handleShow = () => {
-              toast.success("Added to Cart", {
+            const AddToCart = () => {
+              if ((!IsLogedIn)) {
+                console.log('hello')
+              }
+              else{
+                toast.success("Added to Cart", {
                 position: toast.POSITION.TOP_RIGHT,
                 type: toast.TYPE.INFO,
                 autoClose: 1000,
@@ -26,6 +34,7 @@ const Home = () => {
                 id: product.id,
                 product,
               });
+              }
             };
             return (
               <div key={product.id} className='col-md-3 p-2 col-6 pb-md-5'>
@@ -59,7 +68,10 @@ const Home = () => {
                       <h6 className='title text-capitalize text-start pb-1'>
                         {product.title}
                       </h6>
-                      <p className='text-muted text-start' style={{fontSize:'12px'}}>
+                      <p
+                        className='text-muted text-start'
+                        style={{ fontSize: "12px" }}
+                      >
                         {product.category}
                       </p>
                       <div className='card-footer bg-white px-0 pt-2 pb-2'>
@@ -71,7 +83,7 @@ const Home = () => {
                           </div>
                           <div
                             className='col-6 text-end cursor'
-                            onClick={handleShow}
+                            onClick={AddToCart}
                             // onClick={() =>
                             //   dispatch({
                             //     type: "ADD_TO_CART",

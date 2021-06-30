@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "./logo.PNG";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./../Global/cartContext";
-import { faCircle, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CategoryContext } from "../Global/categoryContext";
 import { ArrowBarRight } from "react-bootstrap-icons";
@@ -21,8 +21,8 @@ const Navbar = (props) => {
   }, []);
 
   return (
-    <div>
-      <div>
+
+      <div  style={{ paddingTop: "150px" }}>
         <nav
           className={
             scroll
@@ -97,12 +97,12 @@ const Navbar = (props) => {
                   Categories
                 </Link>
                 <ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
-                  {data.Category.map((catName, index) => {
+                  {data.Category.map((CatName, index) => {
                     return (
                       <Link
                         to={{
-                          pathname: `/categories/${catName}`,
-                          state: { catName },
+                          pathname: `/categories/${CatName}`,
+                          state: { CatName },
                         }}
                         key={index}
                       >
@@ -112,7 +112,7 @@ const Navbar = (props) => {
                             data-bs-toggle='collapse'
                             data-bs-target='.navbar-collapse.show'
                           >
-                            {catName}
+                            {CatName}
                           </span>
                         </li>
                       </Link>
@@ -147,7 +147,7 @@ const Navbar = (props) => {
                   </span>
                 </li>
               </Link>
-              <Link to='/'>
+              <Link to='/login'>
                 <li className='nav-item custom-button'>
                   <span
                     className='nav-link btn login'
@@ -198,7 +198,6 @@ const Navbar = (props) => {
           </Link>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -42,16 +42,7 @@ a:link {
   border-top-left-radius: 0.5rem;
 }
 
-.cart .img {
-  height: 80px;
-  width: 80px;
-}
-.cart .title {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 20px;
-  color: black !important;
-}
+
 
 .btn:focus {
   outline: none !important;
@@ -59,46 +50,6 @@ a:link {
 }
 .cursor {
   cursor: pointer;
-}
-
-.fixTableHead {
-  overflow-y: auto;
-  max-height: 80vh;
-}
-.fixTableHead thead th {
-  position: sticky;
-  top: -1px;
-  transition: 0.8s ease-in-out;
-  background-color: #284561;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ebebeb;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #6d6d6d;
-}
-.cart-icon-list {
-  border: 1px solid #7e7878;
-  border-radius: 4px !important;
-  padding: 0 2px;
-}
-
-.plus-minus-icon {
-  color: black !important;
-}
-
-.cart .card p {
-  font-size: 14px;
 }
 
 .signup {
@@ -114,9 +65,7 @@ a:link {
 }
 
 @media only screen and (max-width: 768px) {
-  .fixTableHead {
-    font-size: 12px;
-  }
+
   .product .custom-home-image {
     height: 150px !important;
   }
