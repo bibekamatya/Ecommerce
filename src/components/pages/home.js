@@ -9,9 +9,7 @@ import Navbar from "./../navbar/navbar";
 
 const Home = () => {
   const data = useContext(ProductContext);
-  const { dispatch,IsLogedIn } = useContext(CartContext);
-
-  console.log(IsLogedIn);
+  const { dispatch } = useContext(CartContext);
 
   return (
     <>
@@ -20,11 +18,7 @@ const Home = () => {
         <div className='row product'>
           {data.Products.map((product) => {
             const AddToCart = () => {
-              if ((!IsLogedIn)) {
-                console.log('hello')
-              }
-              else{
-                toast.success("Added to Cart", {
+              toast.success("Added to Cart", {
                 position: toast.POSITION.TOP_RIGHT,
                 type: toast.TYPE.INFO,
                 autoClose: 1000,
@@ -34,8 +28,8 @@ const Home = () => {
                 id: product.id,
                 product,
               });
-              }
             };
+
             return (
               <div key={product.id} className='col-md-3 p-2 col-6 pb-md-5'>
                 <div

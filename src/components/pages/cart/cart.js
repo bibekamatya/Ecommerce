@@ -19,14 +19,9 @@ const cartListHeading = [
   { id: 5, name: "total amount" },
 ];
 
-
-
 const Cart = (props) => {
-  const { shoppingCart, qty, totalPrice, dispatch } = useContext(CartContext);
-
-
-  // const [IsLogedIn, setIsLogedIn] = useState(false);
-
+  const { shoppingCart, qty, totalPrice, dispatch } =
+    useContext(CartContext);
 
   //don't have any server so using this method !
 
@@ -148,7 +143,7 @@ const Cart = (props) => {
           </div>
         ) : (
           <div className='pt-5 mt-5 pt-md-0 pt-lg-0 pt-xl-0 mt-md-0 mt-lg-0 mt-xl-0'>
-            <img style={{ height: "300px" }} src={empty_cart} alt=''/>
+            <img style={{ height: "300px" }} src={empty_cart} alt='' />
             <p>Sorry currently your cart is empty...</p>
           </div>
         )}

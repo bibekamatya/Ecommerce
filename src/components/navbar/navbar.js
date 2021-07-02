@@ -147,7 +147,7 @@ const Navbar = (props) => {
                   </span>
                 </li>
               </Link>
-              <Link to='/login'>
+              <Link to='/log_in'>
                 <li className='nav-item custom-button'>
                   <span
                     className='nav-link btn login'
@@ -158,7 +158,7 @@ const Navbar = (props) => {
                   </span>
                 </li>
               </Link>
-              <Link to='/'>
+              <Link to='/sign_up'>
                 <li className='nav-item me-md-5 me-0'>
                   <button
                     className='nav-links btn btn-primary custom-button signup'

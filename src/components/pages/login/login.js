@@ -1,43 +1,53 @@
 import "./login.css";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
-import { Person, ShieldLock } from "react-bootstrap-icons";
+import { ShieldLock } from "react-bootstrap-icons";
 import { useContext } from "react";
-import { UserListContext } from "./../../Global/userListProvider";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { CartContext } from "./../../Global/cartContext";
 import Navbar from "../../navbar/navbar";
+import { AuthContext } from "../../Global/authContext";
 toast.configure();
 
 const LogIn = (props) => {
-  const UserList = useContext(UserListContext);
-  const { setIsLogedIn } = useContext(CartContext);
+  const { dispatch, UserList } = useContext(AuthContext);
 
+  console.log(UserList);
   const [UserName, setUserName] = useState("");
   const [UserPass, setUserPass] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const submitForm = (e) => {
     e.preventDefault();
+    setErrorMessage("");
     const check = UserList.find(
       (user) => user.username === UserName && user.password === UserPass
     );
     if (check) {
-      console.log("hello");
-      props.history.push("/");
-      toast.success(
-        "You have successfully Loged In." +
-          "Now you can continue your shopping",
-        {
-          position: toast.POSITION.TOP_LEFT,
-          type: toast.TYPE.SUCCESS,
-          pauseOnHover: false,
-        }
-      );
-      setIsLogedIn(true);
+      console.log("matched");
+      setTimeout(() => {
+        toast.success(
+          "You have successfully Loged In." +
+            "Now you can continue your shopping",
+          {
+            position: toast.POSITION.TOP_LEFT,
+            type: toast.TYPE.SUCCESS,
+            pauseOnHover: false,
+          }
+        );
+      }, 1000);
+      setTimeout(() => {
+        props.history.push("/");
+      }, 2000);
+
+      dispatch({
+        type: "LOGIN",
+        username: UserName,
+      });
     } else {
-      setErrorMessage("username and password did not match ");
+      setTimeout(() => {
+        setErrorMessage("username and password did not match ");
+      }, 2000);
     }
   };
   return (
@@ -57,9 +67,7 @@ const LogIn = (props) => {
                 <div className='col-auto'>
                   <label className='visually-hidden'>Username</label>
                   <div className='input-group'>
-                    <div className='input-group-text'>
-                      <Person />
-                    </div>
+                    <div className='input-group-text'>@</div>
                     <input
                       type='text'
                       className='form-control'
@@ -103,7 +111,7 @@ const LogIn = (props) => {
                   </button>
                 </div>
               </form>
-              <Link to='#' className='text-center'>
+              <Link to='/sign_up' className='text-center'>
                 Create an account
               </Link>
             </div>

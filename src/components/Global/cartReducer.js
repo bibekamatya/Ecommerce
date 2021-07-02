@@ -73,8 +73,6 @@ export const CartReducer = (state, action) => {
     case "EMPTY":
       return { shoppingCart: [], totalPrice: 0, qty: 0, item: 0 };
 
-    case "LOGIN":
-      break;
     default:
       return state;
   }

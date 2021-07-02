@@ -9,31 +9,34 @@ import Category from "./components/pages/category";
 import CategoryContextProvider from "./components/Global/categoryContext";
 import About from "./components/pages/about";
 import Login from "./components/pages/login/login";
-import UserContextProvider from "./components/Global/userListProvider";
+import AuthContextProvider from "./components/Global/authContext";
+import SignUp from "./components/pages/signup/signup";
 
 function App() {
   return (
     <div className='App'>
       <ProductContextProvider>
-        <UserContextProvider>
-          <CategoryContextProvider>
-            <CartContextProvider>
-              <Route exact path='/login' component={Login} />
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/contact' component={Contact} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/cart' component={Cart} />
-                <Route
-                  exact
-                  path='/categories/:category'
-                  component={Category}
-                />
-              </Switch>
-              <Redirect to='/' />
-            </CartContextProvider>
-          </CategoryContextProvider>
-        </UserContextProvider>
+          <AuthContextProvider>
+            <CategoryContextProvider>
+              <CartContextProvider>
+                <Route exact path='/sign_up' component={SignUp} />
+
+                <Route exact path='/log_in' component={Login} />
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route exact path='/contact' component={Contact} />
+                  <Route exact path='/about' component={About} />
+                  <Route exact path='/cart' component={Cart} />
+                  <Route
+                    exact
+                    path='/categories/:category'
+                    component={Category}
+                  />
+                </Switch>
+                <Redirect to='/' />
+              </CartContextProvider>
+            </CategoryContextProvider>
+          </AuthContextProvider>
       </ProductContextProvider>
     </div>
   );
