@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
-import Navbar from "./../navbar/navbar";
 
 const Home = () => {
   const data = useContext(ProductContext);
@@ -13,8 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <div className='container' style={{ minHeight: "70vh" }}>
+      <div className='container page-body' style={{ minHeight: "70vh" }}>
         <div className='row product'>
           {data.Products.map((product) => {
             const AddToCart = () => {

@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./cart.css";
 import empty_cart from "./empty_cart.jpeg";
-import Navbar from "./../../navbar/navbar";
 toast.configure();
 
 const cartListHeading = [
@@ -38,8 +37,7 @@ const Cart = (props) => {
   };
 
   return (
-    <div>
-      <Navbar />
+    <div className='page-body'>
       <div
         style={{ minHeight: "60vh" }}
         className='container px-md-auto mx-md-auto cart'

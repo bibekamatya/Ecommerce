@@ -33,14 +33,15 @@ body {
   visibility: hidden;
 }
 
-.badge{
-  padding: .25em .50em !important;
+.badge {
+  padding: 0.25em 0.5em !important;
   font-weight: lighter !important;
 }
-.my-badge{
+.my-badge {
   top: 10px;
   left: 28px;
 }
+
 @media only screen and (max-width: 768px) {
   .cart-basket-icon {
     top: 30%;

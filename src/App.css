@@ -42,8 +42,6 @@ a:link {
   border-top-left-radius: 0.5rem;
 }
 
-
-
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -64,9 +62,20 @@ a:link {
   align-items: center !important;
 }
 
-@media only screen and (max-width: 768px) {
+.page-body {
+  padding-top: 100px;
+}
 
+@media only screen and (max-width: 768px) {
   .product .custom-home-image {
     height: 150px !important;
   }
+  .page-body {
+    padding-top: 150px;
+  }
+}
+
+.form-control:focus {
+  border-color: deepskyblue !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(100, 237, 255, 0.5) !important;
 }

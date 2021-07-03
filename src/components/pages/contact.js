@@ -1,10 +1,8 @@
-import Navbar from './../navbar/navbar';
 
 const Contact = () => {
 
   return (
-    <>
-    <Navbar/>
+    <div className='page-body'>
       <div className='jumbotron jumbotron-fluid pt-5 mt-5' >
         <div className='container pt-5'>
           <h1 className='display-4'>I'm Contact</h1>
@@ -14,7 +12,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

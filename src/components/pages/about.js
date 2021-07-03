@@ -1,11 +1,7 @@
-import Navbar from './../navbar/navbar';
-
 const About = () => {
-
   return (
-    <>
-    <Navbar/>
-      <div className='jumbotron jumbotron-fluid pt-5 mt-5' >
+    <div className='page-body'>
+      <div className='jumbotron jumbotron-fluid pt-5 mt-5'>
         <div className='container pt-5'>
           <h1 className='display-4'>I'm About</h1>
           <p className='lead'>
@@ -14,7 +10,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
