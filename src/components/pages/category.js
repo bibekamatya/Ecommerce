@@ -5,6 +5,7 @@ import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
 import axios from "axios";
+import Navbar from "../navbar/navbar";
 
 const Catogory = (props) => {
   const Category = props.location.state;
@@ -27,6 +28,7 @@ const Catogory = (props) => {
 
   return (
     <>
+    <Navbar/>
       <div className='container page-body' style={{minHeight:'50vh'}}>
         <div className='row product'>
           {Product.map((product) => {

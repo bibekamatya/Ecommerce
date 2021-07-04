@@ -37,6 +37,34 @@ const Navbar = (props) => {
           />
         </NavLink>
 
+        <ul className='navbar-nav ms-auto me-4 d-block d-lg-none '>
+          <Link to='/cart'>
+            <li className='nav-item'>
+              <span
+                className='nav-link position-relative'
+                data-bs-toggle='collapse'
+                data-bs-target='.navbar-collapse.show'
+              >
+                <FontAwesomeIcon
+                  icon={faShoppingCart}
+                  className='text-success cart-basket-icon'
+                />
+                <div id='cart'>
+                  <span
+                    className={
+                      item === 0
+                        ? "hide-price"
+                        : "position-absolute my-badge translate-middle badge rounded-pill bg-primary wf-light"
+                    }
+                  >
+                    {item}
+                  </span>
+                </div>
+              </span>
+            </li>
+          </Link>
+        </ul>
+
         <button
           className='navbar-toggler'
           type='button'
@@ -119,10 +147,8 @@ const Navbar = (props) => {
                 })}
               </ul>
             </li>
-          </ul>
-          <ul className='navbar-nav'>
             <Link to='/cart'>
-              <li className='nav-item d-sm-none d-md-block d-none'>
+              <li className='nav-item d-sm-none d-md-none d-lg-block d-none'>
                 <span
                   className='nav-link position-relative'
                   data-bs-toggle='collapse'
@@ -146,6 +172,8 @@ const Navbar = (props) => {
                 </span>
               </li>
             </Link>
+          </ul>
+          <ul className='navbar-nav'>
             <Link to='/log_in'>
               <li className='nav-item custom-button'>
                 <span
@@ -158,20 +186,20 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/sign_up'>
-              <li className='nav-item me-md-5 me-0'>
+              <li className='nav-item me-lg-5 me-xl-5 me-0'>
                 <button
                   className='nav-links btn btn-primary custom-button signup'
                   data-bs-toggle='collapse'
                   data-bs-target='.navbar-collapse.show'
                 >
-                  SignUp <ArrowBarRight />
+                  SignUp
                 </button>
               </li>
             </Link>
           </ul>
         </div>
       </nav>
-      <div className='icon-bar'>
+      {/* <div className='icon-bar'>
         <Link to='/cart'>
           <span
             className='nav-link'
@@ -195,7 +223,7 @@ const Navbar = (props) => {
             </div>
           </span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

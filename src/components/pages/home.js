@@ -5,27 +5,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "./../Global/cartContext";
 import { toast } from "react-toastify";
 import Footer from "./../footer/footer";
+import Navbar from "../navbar/navbar";
 
 const Home = () => {
   const data = useContext(ProductContext);
-  const { dispatch } = useContext(CartContext);
+  const { dispatch, Login } = useContext(CartContext);
 
   return (
     <>
+      <Navbar />
       <div className='container page-body' style={{ minHeight: "70vh" }}>
         <div className='row product'>
           {data.Products.map((product) => {
             const AddToCart = () => {
-              toast.success("Added to Cart", {
-                position: toast.POSITION.TOP_RIGHT,
-                type: toast.TYPE.INFO,
-                autoClose: 1000,
-              });
-              dispatch({
-                type: "ADD_TO_CART",
-                id: product.id,
-                product,
-              });
+              if (Login === true) {
+                toast.success("Added to Cart", {
+                  position: toast.POSITION.BOTTOM_RIGHT,
+                  type: toast.TYPE.INFO,
+                  autoClose: 1000,
+                });
+                dispatch({
+                  type: "ADD_TO_CART",
+                  id: product.id,
+                  product,
+                });
+              } else {
+                console.log("plaese login");
+              }
             };
 
             return (

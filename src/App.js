@@ -10,7 +10,6 @@ import CategoryContextProvider from "./components/Global/categoryContext";
 import About from "./components/pages/about";
 import Login from "./components/pages/login/login";
 import SignUp from "./components/pages/signup/signup";
-import Navbar from "./components/navbar/navbar";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <ProductContextProvider>
         <CategoryContextProvider>
           <CartContextProvider>
-            <Navbar />
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/contact' component={Contact} />

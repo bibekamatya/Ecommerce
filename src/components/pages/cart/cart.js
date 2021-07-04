@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./cart.css";
 import empty_cart from "./empty_cart.jpeg";
+import Navbar from "./../../navbar/navbar";
 toast.configure();
 
 const cartListHeading = [
@@ -19,7 +20,7 @@ const cartListHeading = [
 ];
 
 const Cart = (props) => {
-  const { shoppingCart, qty, totalPrice, dispatch } =
+  const { shoppingCart, qty, totalPrice, dispatch, userName } =
     useContext(CartContext);
 
   //don't have any server so using this method !
@@ -37,14 +38,15 @@ const Cart = (props) => {
   };
 
   return (
-    <div className='page-body'>
-      <div
-        style={{ minHeight: "60vh" }}
-        className='container px-md-auto mx-md-auto cart'
-      >
-        {shoppingCart.length > 0 ? (
-          <div className='card my-cart shadow-lg pt-md-0 pt-5 pt-xl-0 '>
-            <div className=''>
+    <>
+      <Navbar />
+      <div className='container cart'>
+        <div className='row d-flex flex-column min-vh-100 justify-content-center align-items-center'>
+          {shoppingCart.length > 0 ? (
+            <div
+              className='card shadow-lg'
+              style={{ paddingTop: "100px" }}
+            >
               <div className='pr-md-0'>
                 <div className='fixTableHead'>
                   <Table responsve className='table table-striped'>
@@ -66,7 +68,7 @@ const Cart = (props) => {
                           <tr key={cart.id}>
                             <td className='align-middle'>
                               <img
-                                className='img cart-img '
+                                className='img cart-img rounded-circle'
                                 alt={cart.title}
                                 src={cart.image}
                               />
@@ -81,7 +83,11 @@ const Cart = (props) => {
                               <span
                                 className='cart-icon-list cursor'
                                 onClick={() =>
-                                  dispatch({ type: "MINUS", id: cart.id, cart })
+                                  dispatch({
+                                    type: "MINUS",
+                                    id: cart.id,
+                                    cart,
+                                  })
                                 }
                               >
                                 <Dash className='mb-1 plus-minus-icon ' />
@@ -90,7 +96,11 @@ const Cart = (props) => {
                               <span
                                 className='cart-icon-list cursor'
                                 onClick={() =>
-                                  dispatch({ type: "PLUS", id: cart.id, cart })
+                                  dispatch({
+                                    type: "PLUS",
+                                    id: cart.id,
+                                    cart,
+                                  })
                                 }
                               >
                                 <Plus className='mb-1 plus-minus-icon ' />
@@ -118,35 +128,38 @@ const Cart = (props) => {
                   </Table>
                 </div>
               </div>
-            </div>
 
-            {/* <div className='col-md-2 m-auto'> */}
-            <div className='card-body mr-auto mb-2'>
-              <div className='text-end'>
-                <p>Total Quantity : {qty}</p>
-                <p className='text-success'>Shipping Cost : $ 0</p>
-                <p className='text-danger bold fw-bold'>
-                  Total : $ {totalPrice}
-                </p>
-                <StripeCheckout
-                  stripeKey='pk_test_51J5bT7SCgFasMdq4MnJzzDAEzil35dNbMdapFipHacYso9MIljPjwI5k0QiEepP7JUDQrKtJ031L7eQgS8McAQY9005RCqap0n'
-                  token={HandleToken}
-                  billingAddress
-                  shippingAddress
-                  amount={totalPrice * 100}
-                  name='All Products'
-                ></StripeCheckout>
+              {/* <div className='col-md-2 m-auto'> */}
+              <div className='card-body mr-auto mb-2'>
+                <div className='text-end'>
+                  <p>User : {userName}</p>
+                  <p>Total Quantity : {qty}</p>
+                  <p className='text-success'>Shipping Cost : $ 0</p>
+                  <p className='text-danger bold fw-bold'>
+                    Total : $ {totalPrice}
+                  </p>
+                  <StripeCheckout
+                    stripeKey='pk_test_51J5bT7SCgFasMdq4MnJzzDAEzil35dNbMdapFipHacYso9MIljPjwI5k0QiEepP7JUDQrKtJ031L7eQgS8McAQY9005RCqap0n'
+                    token={HandleToken}
+                    billingAddress
+                    shippingAddress
+                    amount={totalPrice * 100}
+                    name='All Products'
+                  ></StripeCheckout>
+                </div>
               </div>
             </div>
-          </div>
-        ) : (
-          <div className='pt-5 mt-5 pt-md-0 pt-lg-0 pt-xl-0 mt-md-0 mt-lg-0 mt-xl-0'>
-            <img style={{ height: "300px" }} src={empty_cart} alt='' />
-            <p>Sorry currently your cart is empty...</p>
-          </div>
-        )}
+          ) : (
+            <div className='row  d-flex flex-column min-vh-100 justify-content-center align-items-center'>
+              <div className='col-12'>
+                <img style={{ height: "200px" }} src={empty_cart} alt='' />
+                <p>Sorry currently your cart is empty...</p>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
