@@ -24,9 +24,9 @@ function App() {
               <Route exact path='/about' component={About} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/categories/:category' component={Category} />
-              <Route exact path='/sign_up' component={SignUp} />
-              <Route exact path='/log_in' component={LogIn} />
-              <Route exact path='/log_out' component={LogOut} />
+              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/login' component={LogIn} />
+              <Route exact path='/logout' component={LogOut} />
             </Switch>
             <Redirect to='/' />
           </CartContextProvider>

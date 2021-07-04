@@ -176,7 +176,7 @@ const Navbar = (props) => {
             {Login ? (
               <></>
             ) : (
-              <Link to='/log_in'>
+              <Link to='/login'>
                 <li className='nav-item custom-button'>
                   <span
                     className='nav-link btn login'
@@ -202,14 +202,14 @@ const Navbar = (props) => {
                 </Link>
                 <ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
                   <li>
-                    <Link className='dropdown-item' to='/log_out'>
+                    <Link className='dropdown-item' to='/logout'>
                       Sign out
                     </Link>
                   </li>
                 </ul>
               </li>
             ) : (
-              <Link to='/sign_up'>
+              <Link to='/signup'>
                 <li className='nav-item me-lg-5 me-xl-5 me-0'>
                   <button
                     className='nav-links btn btn-primary custom-button signup'

@@ -53,7 +53,7 @@ const SignUp = (props) => {
           <div className='card pb-3 shadow-lg'>
             <div className='card-body'>
               <div className='card-header pb-3 bg-transparent'>
-                <h5>Sign_Up</h5>
+                <h5>React Online Shopping App</h5>
               </div>
             </div>
             <div className='pb-2'>

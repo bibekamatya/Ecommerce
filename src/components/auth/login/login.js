@@ -54,7 +54,7 @@ const LogIn = (props) => {
           <div className='card shadow-lg'>
             <div className='card-body'>
               <div className='card-header bg-transparent pt-3'>
-                <h6>Log In</h6>
+                <h6>React Online Shopping App</h6>
               </div>
               <div className='pt-3'>
                 <img
@@ -106,7 +106,7 @@ const LogIn = (props) => {
                   </button>
                 </div>
               </form>
-              <Link to='/sign_up' className='text-center'>
+              <Link to='/signup' className='text-center'>
                 Create an account
               </Link>
             </div>
