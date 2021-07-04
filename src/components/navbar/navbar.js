@@ -6,10 +6,9 @@ import { CartContext } from "./../Global/cartContext";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CategoryContext } from "../Global/categoryContext";
-import { ArrowBarRight } from "react-bootstrap-icons";
-
+import Avatar from "react-avatar";
 const Navbar = (props) => {
-  const { item } = useContext(CartContext);
+  const { item, userName, Login } = useContext(CartContext);
   const data = useContext(CategoryContext);
 
   const [scroll, setScroll] = useState(false);
@@ -117,7 +116,6 @@ const Navbar = (props) => {
                 to=''
                 className='nav-link dropdown-toggle'
                 data-bs-toggle='dropdown'
-                href='#'
                 role='button'
                 aria-expanded='false'
               >
@@ -173,57 +171,59 @@ const Navbar = (props) => {
               </li>
             </Link>
           </ul>
+
           <ul className='navbar-nav'>
-            <Link to='/log_in'>
-              <li className='nav-item custom-button'>
-                <span
-                  className='nav-link btn login'
-                  data-bs-toggle='collapse'
-                  data-bs-target='.navbar-collapse.show'
+            {Login ? (
+              <></>
+            ) : (
+              <Link to='/log_in'>
+                <li className='nav-item custom-button'>
+                  <span
+                    className='nav-link btn login'
+                    data-bs-toggle='collapse'
+                    data-bs-target='.navbar-collapse.show'
+                  >
+                    LogIn
+                  </span>
+                </li>
+              </Link>
+            )}
+            {Login ? (
+              <li className='nav-item my-custom-drop-down dropdown me-lg-5 me-xl-5 me-0'>
+                <Link
+                  to=''
+                  className='nav-link '
+                  id='navbarDropdown'
+                  role='button'
+                  data-bs-toggle='dropdown'
+                  aria-expanded='false'
                 >
-                  LogIn
-                </span>
+                  <Avatar name={userName} size='30' round={true} />
+                </Link>
+                <ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
+                  <li>
+                    <Link className='dropdown-item' to='/log_out'>
+                      Sign out
+                    </Link>
+                  </li>
+                </ul>
               </li>
-            </Link>
-            <Link to='/sign_up'>
-              <li className='nav-item me-lg-5 me-xl-5 me-0'>
-                <button
-                  className='nav-links btn btn-primary custom-button signup'
-                  data-bs-toggle='collapse'
-                  data-bs-target='.navbar-collapse.show'
-                >
-                  SignUp
-                </button>
-              </li>
-            </Link>
+            ) : (
+              <Link to='/sign_up'>
+                <li className='nav-item me-lg-5 me-xl-5 me-0'>
+                  <button
+                    className='nav-links btn btn-primary custom-button signup'
+                    data-bs-toggle='collapse'
+                    data-bs-target='.navbar-collapse.show'
+                  >
+                    Sign Up
+                  </button>
+                </li>
+              </Link>
+            )}
           </ul>
         </div>
       </nav>
-      {/* <div className='icon-bar'>
-        <Link to='/cart'>
-          <span
-            className='nav-link'
-            data-bs-toggle='collapse'
-            data-bs-target='.navbar-collapse.show'
-          >
-            <FontAwesomeIcon
-              icon={faShoppingCart}
-              className='text-success cart-basket-icon'
-            />
-            <div id='cart'>
-              <span
-                className={
-                  item === 0
-                    ? "hide-price"
-                    : " cart-basket d-flex align-items-center justify-content-center"
-                }
-              >
-                {item}
-              </span>
-            </div>
-          </span>
-        </Link>
-      </div> */}
     </div>
   );
 };

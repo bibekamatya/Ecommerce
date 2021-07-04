@@ -72,3 +72,8 @@ body {
     transform: translateY(-50%);
   }
 }
+.my-custom-drop-down .dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: -100px !important;
+  margin-top: 0.125rem;
+}

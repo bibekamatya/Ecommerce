@@ -4,7 +4,7 @@ import { ShieldLock } from "react-bootstrap-icons";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { CartContext } from "./../../Global/cartContext";
+import { CartContext } from "../../Global/cartContext";
 toast.configure();
 
 const LogIn = (props) => {
@@ -37,7 +37,7 @@ const LogIn = (props) => {
 
         setTimeout(() => {
           props.history.push("/");
-        }, 2000);
+        }, 1500);
       })
       .catch((err) => {
         if (err.response) {

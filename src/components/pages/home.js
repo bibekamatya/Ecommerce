@@ -30,7 +30,7 @@ const Home = () => {
                   product,
                 });
               } else {
-                console.log("plaese login");
+                alert('Please login first...')
               }
             };
 
