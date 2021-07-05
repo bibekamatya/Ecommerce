@@ -1,0 +1,59 @@
+/* css for details page */
+
+.details .btn {
+  font-size: 10.24px !important;
+  text-align: center !important;
+  letter-spacing: 0.5px !important;
+  padding: 14px 25px 13px 25px !important;
+  line-height: 1.1 !important;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.details .btn-add-to-cart {
+  text-decoration: none !important;
+  font-weight: lighter 700;
+  background-color: #26a69a;
+  border: none;
+}
+.details .btn-add-to-cart:hover {
+  background-color: #2bbbad !important;
+}
+
+.details .btn-buy-now {
+  text-decoration: none !important;
+  font-weight: lighter 700;
+  border: none;
+}
+/* .details .btn-buy-now:hover {
+  background-color: #ae3737;
+} */
+
+.details .z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%) !important;
+  padding: 40px 0px;
+}
+
+.details img {
+  padding: 60px 0 !important;
+}
+
+.details .text-muted {
+  color: #4f4f4f !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .details .row {
+    padding: 0 5px 50px 5px;
+  }
+}

@@ -1,4 +1,5 @@
 import logo from "./logo.png";
+import "../auth.css";
 import { Link } from "react-router-dom";
 import { ShieldLock } from "react-bootstrap-icons";
 import { useState, useContext } from "react";
@@ -37,7 +38,7 @@ const LogIn = (props) => {
 
         setTimeout(() => {
           props.history.push("/");
-        }, 1500);
+        }, 1000);
       })
       .catch((err) => {
         if (err.response) {
@@ -48,7 +49,7 @@ const LogIn = (props) => {
   };
 
   return (
-    <div className='container'>
+    <div className='container login-content'>
       <div className='row d-flex flex-column min-vh-100 justify-content-center align-items-center'>
         <div className='col-md-5 col-lg-4 col-xl-4 col-sm-6'>
           <div className='card shadow-lg'>
@@ -59,7 +60,7 @@ const LogIn = (props) => {
               <div className='pt-3'>
                 <img
                   src={logo}
-                  style={{ height: "100px", width: "100px" }}
+                  className='img-fluid'
                   alt=''
                 />
               </div>
@@ -106,9 +107,11 @@ const LogIn = (props) => {
                   </button>
                 </div>
               </form>
-              <Link to='/signup' className='text-center'>
-                Create an account
-              </Link>
+              <div className='pt-1' style={{ fontSize: "12px" }}>
+                <span>
+                  Don't have an account ? <Link to='/signup'>Register</Link>
+                </span>
+              </div>
             </div>
           </div>
         </div>

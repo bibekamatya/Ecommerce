@@ -1,0 +1,27 @@
+/* css for signIn / signUp / logIn */
+.login-content .btn,
+.signup-content .btn,
+.logout-content .btn {
+  font-size: 13px !important;
+  text-align: center !important;
+  letter-spacing: 0.5px !important;
+  padding: 12px 25px!important;
+  line-height: 1.1 !important;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.login-content .img-fluid,
+.signup-content .img-fluid,
+.logout-content .img-fluid {
+  height: 160px !important;
+}

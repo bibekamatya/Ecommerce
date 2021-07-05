@@ -1,8 +1,15 @@
 import logo from "../login/logo.png";
-import { Person, ShieldLock, PersonCircle } from "react-bootstrap-icons";
+import "../auth.css";
+import {
+  Person,
+  ShieldLock,
+  PersonCircle,
+  PersonPlus,
+} from "react-bootstrap-icons";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 toast.configure();
 
 const SignUp = (props) => {
@@ -25,7 +32,7 @@ const SignUp = (props) => {
     };
     axios
       .post("https://truly-contacts.herokuapp.com/api/auth/register", data)
-      
+
       .then((res) => {
         console.log(res.data);
 
@@ -47,7 +54,7 @@ const SignUp = (props) => {
   };
 
   return (
-    <div className='container'>
+    <div className='container signup-content'>
       <div className='row d-flex flex-column min-vh-100 justify-content-center align-items-center'>
         <div className='col-md-6 col-lg-4 col-sm-12'>
           <div className='card pb-3 shadow-lg'>
@@ -57,11 +64,7 @@ const SignUp = (props) => {
               </div>
             </div>
             <div className='pb-2'>
-              <img
-                src={logo}
-                style={{ height: "100px", width: "100px" }}
-                alt=''
-              />
+              <img src={logo} className='img-fluid' alt='' />
             </div>
             <div className='card-body'>
               <form onSubmit={register}>
@@ -147,8 +150,15 @@ const SignUp = (props) => {
 
                 <button type='submit' className='btn btn-primary w-100 mt-4'>
                   Register
+                  <PersonPlus
+                    className='ms-2'
+                    style={{ marginBottom: "2px" }}
+                  />
                 </button>
               </form>
+              <div className='pt-1' style={{ fontSize: "12px" }}>
+                <Link to='/login'>Already have an account ?</Link>
+              </div>
             </div>
           </div>
         </div>

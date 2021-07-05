@@ -6,6 +6,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import "materialize-css/dist/css/materialize.min.css";
+// import "materialize-css/dist/js/materialize.min.js";
 
 ReactDOM.render(
   <BrowserRouter>

@@ -1,12 +1,13 @@
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import logo from "./logo.PNG";
+import logo from "./logo.png";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./../Global/cartContext";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CategoryContext } from "../Global/categoryContext";
 import Avatar from "react-avatar";
+import { CaretRight } from "react-bootstrap-icons";
 const Navbar = (props) => {
   const { item, userName, Login } = useContext(CartContext);
   const data = useContext(CategoryContext);
@@ -24,8 +25,8 @@ const Navbar = (props) => {
       <nav
         className={
           scroll
-            ? "navbar navbar-expand-lg fixed-top shadow-lg navbar-light bg-light"
-            : "navbar navbar-expand-lg fixed-top logo navbar-light bg-light"
+            ? "navbar navbar-expand-lg fixed-top navbar-light bg-light z-depth-1 px-1 px-md-5 px-lg-5 px-xl-5 navbar-after-scroll"
+            : "navbar navbar-expand-lg fixed-top navbar-light bg-light z-depth-1 px-1 px-md-5 px-lg-5 px-xl-5 navbar-before-scroll"
         }
       >
         <NavLink className='navbar-brand' to='/'>
@@ -79,7 +80,7 @@ const Navbar = (props) => {
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto me-auto'>
             <Link to='/'>
-              <li className='nav-item active mx-md-2 mx-auto'>
+              <li className='nav-item active mx-md-3 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -90,7 +91,7 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/contact'>
-              <li className='nav-item mx-md-2 mx-auto'>
+              <li className='nav-item mx-md-3 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -101,7 +102,7 @@ const Navbar = (props) => {
               </li>
             </Link>
             <Link to='/about'>
-              <li className='nav-item mx-md-2 mx-auto'>
+              <li className='nav-item mx-md-3 mx-auto'>
                 <span
                   className='nav-link'
                   data-bs-toggle='collapse'
@@ -111,7 +112,7 @@ const Navbar = (props) => {
                 </span>
               </li>
             </Link>
-            <li className='nav-item dropdown mx-md-2 mx-auto'>
+            <li className='nav-item dropdown mx-md-3 mx-auto'>
               <Link
                 to=''
                 className='nav-link dropdown-toggle'
@@ -154,7 +155,7 @@ const Navbar = (props) => {
                 >
                   <FontAwesomeIcon
                     icon={faShoppingCart}
-                    className='text-success cart-basket-icon'
+                    className='cart-basket-icon'
                   />
                   <div id='cart'>
                     <span
@@ -198,7 +199,13 @@ const Navbar = (props) => {
                   data-bs-toggle='dropdown'
                   aria-expanded='false'
                 >
-                  <Avatar name={userName} size='30' round={true} />
+                  <Avatar
+                    name={userName}
+                    src={`https://joeschmoe.io/api/v1/${userName}`}
+                    size='30'
+                    round={true}
+                    className='user-logo'
+                  />
                 </Link>
                 <ul className='dropdown-menu' aria-labelledby='navbarDropdown'>
                   <li>
@@ -212,11 +219,12 @@ const Navbar = (props) => {
               <Link to='/signup'>
                 <li className='nav-item me-lg-5 me-xl-5 me-0'>
                   <button
-                    className='nav-links btn btn-primary custom-button signup'
+                    className='nav-links btn btn-primary btn-signup waves-effect'
                     data-bs-toggle='collapse'
                     data-bs-target='.navbar-collapse.show'
                   >
                     Sign Up
+                    <CaretRight style={{ marginBottom: "2px" }} />
                   </button>
                 </li>
               </Link>

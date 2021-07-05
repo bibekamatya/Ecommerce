@@ -1,0 +1,54 @@
+/* css for home-child */
+
+.product .card,
+.product .card-body {
+  border-radius: 1rem;
+}
+.product img {
+  height: 250px;
+  width: 100%;
+}
+
+.product .title {
+  color: rgb(100, 81, 81);
+  font-size: 13px !important;
+}
+
+.product .price {
+  font-size: 14px;
+  color: #ff4d01;
+  font-family: cursive;
+  padding-top: 5px !important;
+  float: left;
+}
+.hot span {
+  background-color: #eb6804;
+}
+
+.new span {
+  background-color: #00695c;
+}
+
+.new span,
+.hot span {
+  padding: 8px 12px;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  text-decoration: none !important;
+  color: #fff !important;
+  letter-spacing: 1px !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  position: absolute;
+  font-weight: lighter 300;
+  text-transform: uppercase;
+  top: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  .product .custom-home-image {
+    height: 150px !important;
+    width: 150px !important;
+  }
+}

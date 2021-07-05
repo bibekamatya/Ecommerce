@@ -1,45 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+
 .App {
   text-align: center;
 }
 a:link {
   text-decoration: none;
-}
-.product .card,
-.product .card-body {
-  border-radius: 1rem;
-}
-.product img {
-  height: 250px;
-  width: 100%;
-}
-
-.product .title {
-  color: rgb(100, 81, 81);
-  font-size: 13px !important;
-}
-
-.product .price {
-  font-size: 14px;
-  color: #ff4d01;
-  font-family: cursive;
-  padding-top: 5px !important;
-  float: left;
-}
-.hot span {
-  background-color: rgb(216, 156, 156);
-  color: white !important;
-  padding: 3px 5px 3px 5px;
-  border: 1px;
-  border-bottom-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-
-.new span {
-  background-color: rgb(160, 208, 160);
-  color: white !important;
-  padding: 3px 5px 3px 5px;
-  border-bottom-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
 }
 
 .btn:focus {
@@ -50,14 +19,6 @@ a:link {
   cursor: pointer;
 }
 
-.signup {
-  border-radius: 35px !important;
-  /* padding: 6px 15px !important; */
-}
-
-.nav-links {
-  color: white !important;
-}
 .spinner {
   align-items: center !important;
 }
@@ -73,17 +34,35 @@ a:link {
   margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
-  .product .custom-home-image {
-    height: 150px !important;
-  }
-  .page-body {
-    padding-top: 150px;
-  }
-}
-
 .form-control:focus {
   border-color: deepskyblue !important;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
     0px 0px 8px rgba(100, 237, 255, 0.5) !important;
+}
+
+.z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%) !important;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-body {
+    padding-top: 150px;
+  }
 }

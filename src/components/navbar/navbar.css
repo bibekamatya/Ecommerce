@@ -1,27 +1,24 @@
 /* css for navbar */
-body {
-  font-family: "Open Sans", sans-serif;
-}
 
 .navbar .nav-item {
   padding: 0 10px !important;
 }
-.navbar-light .navbar-toggler {
+.navbar-toggler {
   color: transparent !important;
 }
+
 .navbar .nav-link {
   color: black !important;
 }
 .navbar {
-  background-color: white;
   transition: 0.8s;
 }
 .logo-after-scroll {
-  height: 40px;
+  height: 50px;
   transition: 0.8s;
 }
 .logo-before-scroll {
-  height: 60px;
+  height: 70px;
   transition: 0.8s;
 }
 
@@ -42,11 +39,62 @@ body {
   left: 28px;
 }
 
+.navbar .btn-signup {
+  text-decoration: none !important;
+  color: #fff !important;
+  background-color: #26a69a;
+  text-align: center !important;
+  letter-spacing: 0.5px !important;
+  font-size: 12px !important;
+  padding: 12px 20px 12px 20px !important;
+  line-height: 1.1 !important;
+  border-radius: 2.5rem;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.user-logo {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.navbar .btn-signup:hover {
+  background-color: #2bbbad;
+}
+
+.cart-basket-icon {
+  color: teal !important;
+}
+
+.my-custom-drop-down .dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: -100px !important;
+  margin-top: 0.125rem;
+}
+
 @media only screen and (max-width: 768px) {
+  .logo-after-scroll {
+    height: 40px;
+    transition: 0.8s;
+  }
+  .logo-before-scroll {
+    height: 65px;
+    transition: 0.8s;
+  }
   .cart-basket-icon {
     top: 30%;
     right: 10%;
     font-size: 25px;
+    color: teal !important;
   }
 
   .cart-basket {
@@ -71,9 +119,4 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-}
-.my-custom-drop-down .dropdown-menu[data-bs-popper] {
-  top: 100%;
-  left: -100px !important;
-  margin-top: 0.125rem;
 }

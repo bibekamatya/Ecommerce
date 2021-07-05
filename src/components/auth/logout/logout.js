@@ -1,4 +1,5 @@
 import logo from "../login/logo.png";
+import "../auth.css";
 import { useContext } from "react";
 import { toast } from "react-toastify";
 import { CartContext } from "../../Global/cartContext";
@@ -16,7 +17,7 @@ const LogOut = (props) => {
   };
 
   return (
-    <div className='container'>
+    <div className='container logout-content'>
       <div className='row d-flex flex-column min-vh-100 justify-content-center align-items-center'>
         <div className='col-md-5 col-lg-4 col-xl-4 col-sm-6'>
           <div className='card shadow-lg'>
@@ -25,11 +26,7 @@ const LogOut = (props) => {
                 <h6>React Online Shopping App</h6>
               </div>
               <div className='pt-3'>
-                <img
-                  src={logo}
-                  style={{ height: "100px", width: "100px" }}
-                  alt=''
-                />
+                <img src={logo} alt='' className='img-fluid' />
               </div>
               <form className='mt-5 mb-3' action='' onSubmit={logout}>
                 <div className='col-12'>{userName}</div>
