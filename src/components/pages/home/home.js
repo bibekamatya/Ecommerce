@@ -33,7 +33,7 @@ const Home = () => {
         </div>
 
         {/* *******************************switch-end******************************* */}
-        <div className='row'>
+        <div className='row pt-3'>
           {data.Products.map((product) => {
             console.log(product);
 

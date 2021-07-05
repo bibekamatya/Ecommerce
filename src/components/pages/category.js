@@ -30,7 +30,7 @@ const Catogory = (props) => {
     <>
     <Navbar/>
       <div className='container page-body' style={{minHeight:'50vh'}}>
-        <div className='row product'>
+        <div className='row product pt-3'>
           {Product.map((product) => {
             const handleShow = () => {
               toast.success("Added to Cart", {
