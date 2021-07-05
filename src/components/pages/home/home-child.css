@@ -43,7 +43,8 @@
   position: absolute;
   font-weight: lighter 300;
   text-transform: uppercase;
-  top: -1;
+  top: -1px;
+  left: -2px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -52,3 +53,74 @@
     width: 150px !important;
   }
 }
+
+/********************************************* Estilo iOS ***************************************************/
+.home-page-slider {
+  position: fixed ;
+  top: 180;
+  right: 25px;
+}
+
+.switch {
+  visibility: hidden;
+  position: absolute;
+  margin-left: -9999px;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+/* Estilo Flat */
+.switch--flat + label {
+  padding: 2px;
+  width: 50px;
+  height: 27px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--flat + label:before,
+.switch--flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.switch--flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 20px;
+  background-color: #dddddd;
+  border-radius: 52px;
+  transition: margin 0.4s, background 0.4s;
+}
+.switch--flat:checked + label {
+  background-color: #8ce196;
+}
+.switch--flat:checked + label:after {
+  margin-left: 23px;
+  background-color: #8ce196;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-page-slider {
+    position: fixed ;
+    top: 115px;
+    right: 25px;
+  }
+}
+
