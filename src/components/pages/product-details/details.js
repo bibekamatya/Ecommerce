@@ -23,7 +23,9 @@ const ProductDetails = (props) => {
         props.history.push("/cart");
       }, 800);
     } else {
-      alert("Please login before buy...");
+      setTimeout(() => {
+        props.history.push("/login");
+      }, 800);
     }
   };
 
@@ -40,7 +42,9 @@ const ProductDetails = (props) => {
         product,
       });
     } else {
-      alert("Please login first...");
+      setTimeout(() => {
+        props.history.push("/login");
+      }, 800);
     }
   };
 
