@@ -10,10 +10,7 @@ const HomeChild = (props) => {
   return (
     <>
       {slider ? (
-        <div
-          key={id}
-          className='col-md-4 p-2 pb-5 col-6 pb-md-5 pt-md-4 pt-lg-4 pt-xl-4'
-        >
+        <div className='col-md-4 p-2 pb-5 col-6 pb-md-5 pt-md-4 pt-lg-4 pt-xl-4'>
           <div
             className='card z-depth-1 h-100'
             data-aos='fade-up'
@@ -43,12 +40,7 @@ const HomeChild = (props) => {
                       to={{
                         pathname: `/product-detail/${id}`,
                         state: {
-                          image,
-                          title,
-                          price,
-                          category,
-                          description,
-                          product,
+                          ...props,
                         },
                       }}
                     >
@@ -67,12 +59,7 @@ const HomeChild = (props) => {
                       to={{
                         pathname: `/product-detail/${id}`,
                         state: {
-                          image,
-                          title,
-                          price,
-                          category,
-                          description,
-                          product,
+                          ...props,
                         },
                       }}
                     >
@@ -106,12 +93,7 @@ const HomeChild = (props) => {
                             to={{
                               pathname: `/product-detail/${id}`,
                               state: {
-                                image,
-                                title,
-                                price,
-                                category,
-                                description,
-                                product,
+                                ...props,
                               },
                             }}
                           >
@@ -133,10 +115,7 @@ const HomeChild = (props) => {
         <>
           {/* ******************************************************************************************************* */}
 
-          <div
-            key={id}
-            className='col-md-3 p-2 pb-5 col-6 pb-md-5 pt-md-4 pt-lg-4 pt-xl-4'
-          >
+          <div className='col-md-3 p-2 pb-5 col-6 pb-md-5 pt-md-4 pt-lg-4 pt-xl-4'>
             <div
               className='card z-depth-1 h-100'
               data-aos='fade-up'
@@ -163,12 +142,7 @@ const HomeChild = (props) => {
                   to={{
                     pathname: `/product-detail/${id}`,
                     state: {
-                      image,
-                      title,
-                      price,
-                      category,
-                      description,
-                      product,
+                      ...props,
                     },
                   }}
                 >

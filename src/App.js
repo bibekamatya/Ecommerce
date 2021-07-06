@@ -5,7 +5,7 @@ import Contact from "./components/pages/contact";
 import ProductContextProvider from "./components/Global/productContext";
 import Cart from "./components/pages/cart/cart";
 import CartContextProvider from "./components/Global/cartContext";
-import Category from "./components/pages/category";
+import Category from "./components/pages/category/category";
 import CategoryContextProvider from "./components/Global/categoryContext";
 import About from "./components/pages/about";
 import LogOut from "./components/auth/logout/logout";
@@ -13,7 +13,7 @@ import LogIn from "./components/auth/login/login";
 import SignUp from "./components/auth/signup/signup";
 import ProductDetails from "./components/pages/product-details/details";
 
-function App() {
+function App(e) {
   return (
     <div className='App'>
       <ProductContextProvider>

@@ -5,11 +5,10 @@ import Navbar from "../../navbar/navbar";
 import HomeChild from "./home-child";
 import { useState } from "react";
 
-const Home = () => {
+const Home = (props) => {
   const data = useContext(ProductContext);
 
   const [slider, setslider] = useState(false);
-
 
   return (
     <>
@@ -29,14 +28,12 @@ const Home = () => {
               setslider(!slider);
             }}
           />
-          <label for='switch-flat'></label>
+          <label htmlFor='switch-flat'></label>
         </div>
 
         {/* *******************************switch-end******************************* */}
         <div className='row pt-3'>
-          {data.Products.map((product) => {
-            console.log(product);
-
+          {data.Products.map((product, index) => {
             return (
               <HomeChild
                 title={product.title}
@@ -47,6 +44,7 @@ const Home = () => {
                 description={product.description}
                 product={product}
                 slider={slider}
+                key={index}
               />
             );
           })}
