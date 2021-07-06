@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/eCommerce/static/css/main.254121be.chunk.css",
-    "main.js": "/eCommerce/static/js/main.c386351a.chunk.js",
-    "main.js.map": "/eCommerce/static/js/main.c386351a.chunk.js.map",
+    "main.js": "/eCommerce/static/js/main.490fc08b.chunk.js",
+    "main.js.map": "/eCommerce/static/js/main.490fc08b.chunk.js.map",
     "runtime-main.js": "/eCommerce/static/js/runtime-main.d7f7b525.js",
     "runtime-main.js.map": "/eCommerce/static/js/runtime-main.d7f7b525.js.map",
     "static/css/2.77a4a710.chunk.css": "/eCommerce/static/css/2.77a4a710.chunk.css",
-    "static/js/2.77f745cf.chunk.js": "/eCommerce/static/js/2.77f745cf.chunk.js",
-    "static/js/2.77f745cf.chunk.js.map": "/eCommerce/static/js/2.77f745cf.chunk.js.map",
+    "static/js/2.f12c0d3e.chunk.js": "/eCommerce/static/js/2.f12c0d3e.chunk.js",
+    "static/js/2.f12c0d3e.chunk.js.map": "/eCommerce/static/js/2.f12c0d3e.chunk.js.map",
     "static/js/3.bbccc364.chunk.js": "/eCommerce/static/js/3.bbccc364.chunk.js",
     "static/js/3.bbccc364.chunk.js.map": "/eCommerce/static/js/3.bbccc364.chunk.js.map",
     "index.html": "/eCommerce/index.html",
     "static/css/2.77a4a710.chunk.css.map": "/eCommerce/static/css/2.77a4a710.chunk.css.map",
     "static/css/main.254121be.chunk.css.map": "/eCommerce/static/css/main.254121be.chunk.css.map",
-    "static/js/2.77f745cf.chunk.js.LICENSE.txt": "/eCommerce/static/js/2.77f745cf.chunk.js.LICENSE.txt",
+    "static/js/2.f12c0d3e.chunk.js.LICENSE.txt": "/eCommerce/static/js/2.f12c0d3e.chunk.js.LICENSE.txt",
     "static/media/empty_cart.233d2a5a.jpeg": "/eCommerce/static/media/empty_cart.233d2a5a.jpeg",
     "static/media/logo.4f66bd55.png": "/eCommerce/static/media/logo.4f66bd55.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d7f7b525.js",
     "static/css/2.77a4a710.chunk.css",
-    "static/js/2.77f745cf.chunk.js",
+    "static/js/2.f12c0d3e.chunk.js",
     "static/css/main.254121be.chunk.css",
-    "static/js/main.c386351a.chunk.js"
+    "static/js/main.490fc08b.chunk.js"
   ]
 }
